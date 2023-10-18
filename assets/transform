@@ -1,0 +1,24 @@
+import pygame
+import sys
+
+pygame.init()
+pygame.key.set_repeat()
+width = 800
+height = 600
+
+font = pygame.font.SysFont("monospace", 35)
+clock = pygame.time.Clock()
+
+screen = pygame.display.set_mode((width, height))
+display_surface = pygame.display.set_mode((width, height))
+
+game_over = False
+time = 0
+
+while game_over == False:
+	pygame.display.update()
+	time += 1
+	for event in pygame.event.get():
+		
+		if event.type == pygame.QUIT:
+			sys.exit()
